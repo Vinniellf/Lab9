@@ -28,6 +28,9 @@ public class ServletLogin extends HttpServlet {
                 view = request.getRequestDispatcher("index.jsp");
                 view.forward(request, response);
                 break;
+            case "error":
+                request.getSession().setAttribute("info", "Usuario o contraseña incorrectos");
+                response.sendRedirect("index.jsp");
         }
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
