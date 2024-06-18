@@ -55,7 +55,7 @@
     <h1 class="h3 mb-3 font-weight-normal">Ingreso al Sistema</h1>
     <input type="text" name="username" class="form-control" placeholder="Correo" required autofocus>
     <input type="password" name="password" class="form-control" placeholder="Password" required>
-    <% if (request.getParameter("error") != null) { %>
+    <% if (request.getParameter("info") != null) { %>
     <div class="text-danger mb-2">Error en Usuario o Contraseña</div>
     <% } %>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
